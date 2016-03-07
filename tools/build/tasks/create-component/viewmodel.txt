@@ -1,0 +1,33 @@
+import AbstractComponentController from 'lib/temple/component/AbstractComponentController';
+import AbstractComponentViewModel from 'lib/temple/component/AbstractComponentViewModel';
+
+import {controllerName} from 'app/component/{name}/{controllerName}';
+
+import ko = require('knockout');
+
+class {viewModelName} extends AbstractComponentViewModel
+{
+    controller:{controllerName};
+
+    constructor()
+    {
+        super();
+
+        // initiate observables
+
+        // initiate computed
+    }
+
+    /**
+     *	Destruct your data objects here
+     *	- set your observables to null
+     */
+    destruct()
+    {
+        // Put your cleaning here
+
+        super.destruct();
+    }
+}
+
+export default {viewModelName};

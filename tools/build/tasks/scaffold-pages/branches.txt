@@ -1,0 +1,14 @@
+/**
+ * @namespace app.data.enum
+ * @class Branches
+ */
+class Branches
+{
+	public static {id}:string = '{path}'; //clone
+}
+
+// use in templates
+window['Branches'] = Branches;
+
+// use in classes
+export default Branches;
