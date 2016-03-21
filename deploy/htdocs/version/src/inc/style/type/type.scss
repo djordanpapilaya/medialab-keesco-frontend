@@ -1,5 +1,21 @@
 // Headings
-.heading-01 {}
+.heading-01 {
+	font: $fontAgendaLightBold;
+}
+
+.heading-02 {
+	font: $fontAgendaMediumCondensed;
+}
+
+.heading-03 {
+	font: $fontAgendaLight;
+}
 
 // Paragraphs
-.copy-01 {}
+.copy-01 {
+	font: $fontAgendaLight;
+}
+
+.copy-02 {
+	font: $fontAgendaLight;
+}

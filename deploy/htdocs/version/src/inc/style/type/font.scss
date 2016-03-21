@@ -1,3 +1,9 @@
 // Fonts
 
 //@include font-face('family_name', 'sub_folder', 'filename_no_ext');
+
+@include font-face('agenda_light', 'font/agenda', 'agenda_light-webfont');
+
+@include font-face('agenda_medium_condensed', 'font/agenda', 'agenda_medium_condensed-webfont');
+
+@include font-face('agenda_bold', 'font/agenda', 'agenda_bold-webfont');

@@ -3,5 +3,8 @@
  */
 
 .view.view-profile {
+	@include respond-to("small")
+	{
 
+	}
 }
