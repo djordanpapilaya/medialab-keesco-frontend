@@ -40,6 +40,8 @@ define(["require", "exports", "lib/temple/config/configManagerInstance", "lib/ga
             //
             // default page
             Gaia.router.page('/', Branches_1.default.HOME);
+            Gaia.router.page('/profile', Branches_1.default.PROFILE);
+            Gaia.router.page('/achievement/:' + Param_1.default.SLUG, Branches_1.default.ACHIEVEMENTS_DETAIL);
             //
             // BELOW ARE EXAMPLES, REMOVE IN NEW PROJECT!
             //
@@ -88,5 +90,6 @@ define(["require", "exports", "lib/temple/config/configManagerInstance", "lib/ga
         };
         return Routes;
     })();
+    Object.defineProperty(exports, "__esModule", { value: true });
     exports.default = Routes;
 });
