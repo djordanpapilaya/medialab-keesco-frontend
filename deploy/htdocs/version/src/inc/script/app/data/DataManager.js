@@ -43,5 +43,6 @@ define(["require", "exports", "lib/temple/config/configManagerInstance", "app/ne
         };
         return DataManager;
     })();
+    Object.defineProperty(exports, "__esModule", { value: true });
     exports.default = DataManager;
 });

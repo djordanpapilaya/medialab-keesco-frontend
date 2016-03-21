@@ -1,8 +1,7 @@
 var __extends = (this && this.__extends) || function (d, b) {
     for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p];
     function __() { this.constructor = d; }
-    __.prototype = b.prototype;
-    d.prototype = new __();
+    d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
 };
 define(["require", "exports", "../api/Gaia", "../core/BranchTools", "../core/SiteModel", "../flow/FlowManager", "../events/GaiaEvent", "../events/GotoEventItem", "../router/RouteResultItem", "lib/temple/events/EventDispatcher", "lib/temple/events/CommonEvent", "lib/temple/events/BaseEvent"], function (require, exports, Gaia, BranchTools_1, SiteModel_1, FlowManager_1, GaiaEvent_1, GotoEventItem_1, RouteResultItem_1, EventDispatcher_1, CommonEvent_1, BaseEvent_1) {
     /**
@@ -310,5 +309,6 @@ define(["require", "exports", "../api/Gaia", "../core/BranchTools", "../core/Sit
         };
         return GaiaHQListener;
     })(EventDispatcher_1.default);
+    Object.defineProperty(exports, "__esModule", { value: true });
     exports.default = GaiaHQ;
 });

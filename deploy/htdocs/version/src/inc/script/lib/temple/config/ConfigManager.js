@@ -337,5 +337,6 @@ define(["require", "exports"], function (require, exports) {
         };
         return ConfigManager;
     })();
+    Object.defineProperty(exports, "__esModule", { value: true });
     exports.default = ConfigManager;
 });

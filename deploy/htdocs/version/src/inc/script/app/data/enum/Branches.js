@@ -8,9 +8,13 @@ define(["require", "exports"], function (require, exports) {
         }
         Branches.INDEX = 'index';
         Branches.HOME = 'index/home';
+        Branches.PROFILE = 'index/profile';
+        Branches.ACHIEVEMENTS = 'index/achievements';
+        Branches.ACHIEVEMENTS_DETAIL = 'index/achievements-detail';
         return Branches;
     })();
     // use in templates
     window['Branches'] = Branches;
+    Object.defineProperty(exports, "__esModule", { value: true });
     exports.default = Branches;
 });

@@ -279,6 +279,7 @@ define(["require", "exports", "lib/gaia/router/GaiaRouteGroup", "lib/gaia/router
         };
         return GaiaRoute;
     })();
+    Object.defineProperty(exports, "__esModule", { value: true });
     exports.default = GaiaRoute;
     var Matcher = (function () {
         function Matcher(name, callback) {

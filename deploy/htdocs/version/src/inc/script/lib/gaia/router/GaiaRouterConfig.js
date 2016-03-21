@@ -214,5 +214,6 @@ define(["require", "exports", "./GaiaRouteRequirement", "./GaiaRouteParser", "./
         };
         return GaiaRouterConfig;
     })();
+    Object.defineProperty(exports, "__esModule", { value: true });
     exports.default = GaiaRouterConfig;
 });

@@ -165,6 +165,7 @@ define(["require", "exports", "lib/gaia/router/GaiaRoute", "lib/gaia/router/Rout
         };
         return GaiaRouteGroup;
     })();
+    Object.defineProperty(exports, "__esModule", { value: true });
     exports.default = GaiaRouteGroup;
     var RedirectAction = (function () {
         function RedirectAction(redirect) {

@@ -112,5 +112,6 @@ define(["require", "exports", "bluebird"], function (require, exports, Promise) 
         };
         return DestructibleHelper;
     })();
+    Object.defineProperty(exports, "__esModule", { value: true });
     exports.default = DestructibleHelper;
 });

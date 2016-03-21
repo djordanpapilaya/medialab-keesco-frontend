@@ -17,5 +17,6 @@ define(["require", "exports"], function (require, exports) {
         };
         return RESTInputHandler;
     })();
+    Object.defineProperty(exports, "__esModule", { value: true });
     exports.default = RESTInputHandler;
 });

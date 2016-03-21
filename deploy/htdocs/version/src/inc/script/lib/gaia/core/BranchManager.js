@@ -44,5 +44,6 @@ define(["require", "exports"], function (require, exports) {
         BranchManager.activePages = {};
         return BranchManager;
     })();
+    Object.defineProperty(exports, "__esModule", { value: true });
     exports.default = BranchManager;
 });

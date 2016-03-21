@@ -1,8 +1,7 @@
 var __extends = (this && this.__extends) || function (d, b) {
     for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p];
     function __() { this.constructor = d; }
-    __.prototype = b.prototype;
-    d.prototype = new __();
+    d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
 };
 define(["require", "exports", "../core/Destructible", "./BaseEvent", "./DataEvent"], function (require, exports, Destructible_1, BaseEvent_1, DataEvent_1) {
     /**
@@ -196,6 +195,7 @@ define(["require", "exports", "../core/Destructible", "./BaseEvent", "./DataEven
         };
         return EventDispatcher;
     })(Destructible_1.default);
+    Object.defineProperty(exports, "__esModule", { value: true });
     exports.default = EventDispatcher;
     var EventListenerData = (function () {
         function EventListenerData(dispatcher, type, listener, priority, once) {

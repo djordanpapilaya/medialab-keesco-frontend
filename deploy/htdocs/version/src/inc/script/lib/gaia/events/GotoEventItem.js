@@ -8,5 +8,6 @@ define(["require", "exports"], function (require, exports) {
         }
         return GotoEventItem;
     })();
+    Object.defineProperty(exports, "__esModule", { value: true });
     exports.default = GotoEventItem;
 });

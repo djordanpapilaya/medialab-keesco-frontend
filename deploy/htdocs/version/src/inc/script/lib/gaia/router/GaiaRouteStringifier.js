@@ -16,5 +16,6 @@ define(["require", "exports"], function (require, exports) {
         }
         return GaiaRouteStringifier;
     })();
+    Object.defineProperty(exports, "__esModule", { value: true });
     exports.default = GaiaRouteStringifier;
 });

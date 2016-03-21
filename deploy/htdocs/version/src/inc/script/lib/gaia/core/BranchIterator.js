@@ -28,5 +28,6 @@ define(["require", "exports", "lib/gaia/core/SiteModel"], function (require, exp
         BranchIterator.index = -1;
         return BranchIterator;
     })();
+    Object.defineProperty(exports, "__esModule", { value: true });
     exports.default = BranchIterator;
 });

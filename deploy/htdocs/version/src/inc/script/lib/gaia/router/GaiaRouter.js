@@ -279,5 +279,6 @@ define(["require", "exports", "lib/gaia/router/GaiaRouterConfig", "lib/gaia/rout
         };
         return GaiaRouter;
     })();
+    Object.defineProperty(exports, "__esModule", { value: true });
     exports.default = GaiaRouter;
 });

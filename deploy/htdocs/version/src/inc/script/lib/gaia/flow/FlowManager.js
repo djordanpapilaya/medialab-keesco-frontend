@@ -165,5 +165,6 @@ define(["require", "exports", "./Flow", "./NormalFlow", "./CrossFlow", "./Preloa
         };
         return FlowManager;
     })();
+    Object.defineProperty(exports, "__esModule", { value: true });
     exports.default = FlowManager;
 });

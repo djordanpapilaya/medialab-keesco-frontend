@@ -205,5 +205,6 @@ define(["require", "exports", "lib/gaia/core/SiteModel"], function (require, exp
         };
         return BranchTools;
     })();
+    Object.defineProperty(exports, "__esModule", { value: true });
     exports.default = BranchTools;
 });

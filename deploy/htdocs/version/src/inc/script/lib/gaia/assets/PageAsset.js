@@ -1,8 +1,7 @@
 var __extends = (this && this.__extends) || function (d, b) {
     for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p];
     function __() { this.constructor = d; }
-    __.prototype = b.prototype;
-    d.prototype = new __();
+    d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
 };
 define(["require", "exports", 'knockout', "lib/temple/events/EventDispatcher", "../api/Gaia", "../events/PageEvent", "../events/GaiaHistoryEvent", "../events/AssetEvent"], function (require, exports, ko, EventDispatcher_1, Gaia, PageEvent_1, GaiaHistoryEvent_1, AssetEvent_1) {
     /**
@@ -248,5 +247,6 @@ define(["require", "exports", 'knockout', "lib/temple/events/EventDispatcher", "
         PageAsset.templateMobilePath = 'app/../../template/mobile/'; // relative to this file
         return PageAsset;
     })(EventDispatcher_1.default);
+    Object.defineProperty(exports, "__esModule", { value: true });
     exports.default = PageAsset;
 });

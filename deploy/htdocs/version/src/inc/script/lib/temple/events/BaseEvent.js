@@ -40,5 +40,6 @@ define(["require", "exports"], function (require, exports) {
         };
         return BaseEvent;
     })();
+    Object.defineProperty(exports, "__esModule", { value: true });
     exports.default = BaseEvent;
 });

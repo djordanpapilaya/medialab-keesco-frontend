@@ -82,6 +82,18 @@ define(["require", "exports"], function (require, exports) {
                     {
                         "id": "home",
                         "title": "Home"
+                    },
+                    {
+                        "id": "profile",
+                        "title": "Profile"
+                    },
+                    {
+                        "id": "achievements",
+                        "title": "Achievements"
+                    },
+                    {
+                        "id": "achievements-detail",
+                        "title": "Achievements Detail"
                     }
                 ]
             }

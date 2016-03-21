@@ -25,5 +25,6 @@ define(["require", "exports"], function (require, exports) {
         Destructible.eventNamespaceCount = 10000000;
         return Destructible;
     })();
+    Object.defineProperty(exports, "__esModule", { value: true });
     exports.default = Destructible;
 });

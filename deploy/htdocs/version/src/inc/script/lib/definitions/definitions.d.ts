@@ -14,7 +14,7 @@
 ///<reference path="../createjs/preloadjs.d.ts" />
 ///<reference path="../createjs/soundjs.d.ts" />
 ///<reference path="../sockjs/sockjs.d.ts" />
-// > ///<reference path="../bluebird/bluebird.d.ts" /> 
+///<reference path="../bluebird/bluebird.d.ts" />
 
 ///<reference path="touch.d.ts" />
 
