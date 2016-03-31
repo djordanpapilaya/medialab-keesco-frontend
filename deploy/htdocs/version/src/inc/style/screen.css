@@ -378,22 +378,25 @@ table {
  */
 @font-face {
   font-family: "agenda_light";
-  src: url("../font/font/agenda/agenda_light-webfont.eot");
-  src: url("../font/font/agenda/agenda_light-webfont.eot?#iefix") format("embedded-opentype"), url("../font/font/agenda/agenda_light-webfont.woff") format("woff"), url("../font/font/agenda/agenda_light-webfont.ttf") format("truetype"), url("../font/font/agenda/agenda_light-webfont.svg#agenda_light") format("svg");
+  src: url("../font/font/agenda/Agenda-Light.eot");
+  src: url("../font/font/agenda/Agenda-Light.eot?#iefix") format("embedded-opentype"), url("../font/font/agenda/Agenda-Light.woff") format("woff"), url("../font/font/agenda/Agenda-Light.ttf") format("truetype"), url("../font/font/agenda/Agenda-Light.svg#agenda_light") format("svg");
   font-weight: normal;
   font-style: normal; }
+
 @font-face {
   font-family: "agenda_medium_condensed";
-  src: url("../font/font/agenda/agenda_medium_condensed-webfont.eot");
-  src: url("../font/font/agenda/agenda_medium_condensed-webfont.eot?#iefix") format("embedded-opentype"), url("../font/font/agenda/agenda_medium_condensed-webfont.woff") format("woff"), url("../font/font/agenda/agenda_medium_condensed-webfont.ttf") format("truetype"), url("../font/font/agenda/agenda_medium_condensed-webfont.svg#agenda_medium_condensed") format("svg");
+  src: url("../font/font/agenda/Agenda-Medium.eot");
+  src: url("../font/font/agenda/Agenda-Medium.eot?#iefix") format("embedded-opentype"), url("../font/font/agenda/Agenda-Medium.woff") format("woff"), url("../font/font/agenda/Agenda-Medium.ttf") format("truetype"), url("../font/font/agenda/Agenda-Medium.svg#agenda_medium_condensed") format("svg");
   font-weight: normal;
   font-style: normal; }
+
 @font-face {
   font-family: "agenda_bold";
-  src: url("../font/font/agenda/agenda_bold-webfont.eot");
-  src: url("../font/font/agenda/agenda_bold-webfont.eot?#iefix") format("embedded-opentype"), url("../font/font/agenda/agenda_bold-webfont.woff") format("woff"), url("../font/font/agenda/agenda_bold-webfont.ttf") format("truetype"), url("../font/font/agenda/agenda_bold-webfont.svg#agenda_bold") format("svg");
+  src: url("../font/font/agenda/Agenda-Bold.eot");
+  src: url("../font/font/agenda/Agenda-Bold.eot?#iefix") format("embedded-opentype"), url("../font/font/agenda/Agenda-Bold.woff") format("woff"), url("../font/font/agenda/Agenda-Bold.ttf") format("truetype"), url("../font/font/agenda/Agenda-Bold.svg#agenda_bold") format("svg");
   font-weight: normal;
   font-style: normal; }
+
 .heading-01 {
   font-family: "agenda_bold";
   font-size: 57px;
@@ -564,5 +567,3 @@ html, body {
 /**
  *	Page - achievements-detail
  */
-
-/*# sourceMappingURL=screen.css.map */

@@ -6,9 +6,8 @@ $pathImage: '../image/';
 $spriteDefault: 'sprite-default.png';
 
 // Fonts
-$fontArial: Arial, sans-serif;
 $fontAgendaLight: 'agenda_light';
-$fontAgendaMediumCondensed: 'agenda_medium_condensed';
+$fontAgendaMediumCondensed: 'agenda_medium';
 $fontAgendaLightBold: 'agenda_bold';
 
 // Breakpoint sizes
@@ -18,8 +17,6 @@ $breakpoints: (
 	'medium': '(max-width: 1024px)',
 	'large': '(min-width: 1025px)',
 );
-
-// Sizes
 
 // Colors
 $colorMain: #000;
