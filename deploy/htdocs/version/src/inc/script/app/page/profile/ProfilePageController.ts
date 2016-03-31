@@ -1,10 +1,15 @@
 import DefaultPageController from "app/page/DefaultPageController";
-import ProfilePageViewModel from "app/page/profile/ProfilePageViewModel"; 
+import ProfilePageViewModel from "app/page/profile/ProfilePageViewModel";
+
+import IGatewayResult from "app/net/gateway/result/IGatewayResult";
 
 import DataManager from "../../data/DataManager";
 import * as Gaia from "lib/gaia/api/Gaia";
 
 import ko = require("knockout");
+
+import UserService from "app/net/service/UserService";
+import IUserData from "app/net/service/VO/IUserData";
 
 class ProfilePageController extends DefaultPageController
 {
@@ -20,6 +25,7 @@ class ProfilePageController extends DefaultPageController
 	 */
 	init()
 	{
+		this.getUserInfo();
 		super.init();
 	}
 	
@@ -30,6 +36,15 @@ class ProfilePageController extends DefaultPageController
 	 *	- clear timeouts/intervals
 	 *	- do null-checks on your objects before destructing them, and set them to null afterwards
 	 */
+
+	public getUserInfo()
+	{
+		DataManager.getInstance().UserService.getCurrentUser().then((result:IUserData) =>{
+			this.viewModel.CurrentUser(result);
+			console.log(this.viewModel.CurrentUser());
+		});
+	}
+
 	destruct()
 	{
 		// Put your cleaning here

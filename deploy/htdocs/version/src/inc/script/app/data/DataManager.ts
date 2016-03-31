@@ -5,6 +5,8 @@ import Gateway from "app/net/gateway/Gateway";
 import RESTOutputHandler from "app/net/gateway/output/RESTOutputHandler";
 import RESTInputHandler from "app/net/gateway/input/RESTInputHandler";
 
+import UserService from "app/net/service/UserService";
+
 
 /**
  * @namespace app.data
@@ -13,6 +15,8 @@ import RESTInputHandler from "app/net/gateway/input/RESTInputHandler";
 class DataManager
 {
 	private static _instance:DataManager;
+
+	public UserService:UserService;
 
 	/**
 	 * @property gateway
@@ -49,7 +53,6 @@ class DataManager
 			// the base url
 			url: configManagerInstance.getURL('api'),
 			headers: {
-				'X-Force-Status-Code-200': 1
 			},
 			// the default output handler (can be changed to PostOutputHandler or JSONOutputHandler for the 'old gateway', or to RESTOutputHandler for the 'new style'
 			outputHandler: new RESTOutputHandler(),

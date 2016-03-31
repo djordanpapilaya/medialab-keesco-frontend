@@ -33,9 +33,7 @@ define(["require", "exports", "lib/temple/config/configManagerInstance", "app/ne
             this.gateway = new Gateway_1.default({
                 // the base url
                 url: configManagerInstance_1.default.getURL('api'),
-                headers: {
-                    'X-Force-Status-Code-200': 1
-                },
+                headers: {},
                 // the default output handler (can be changed to PostOutputHandler or JSONOutputHandler for the 'old gateway', or to RESTOutputHandler for the 'new style'
                 outputHandler: new RESTOutputHandler_1.default(),
                 inputHandler: new RESTInputHandler_1.default()

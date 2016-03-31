@@ -84,7 +84,7 @@ var config = {
 		"base": document.querySelector('meta[name=document-base]').getAttribute('content')
 	},
 	"urls": {
-		"api": { "url": "{base}api" }
+		"api": { "url": "http://medialab.jordibeen.nl/api/v1" }
 	},
 	"properties": {
 		"defaultLocale": "en_GB"

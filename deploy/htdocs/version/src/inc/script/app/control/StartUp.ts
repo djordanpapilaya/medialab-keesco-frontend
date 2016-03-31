@@ -9,6 +9,8 @@ import MethodTask from "lib/temple/control/sequence/tasks/MethodTask";
 import ITask from "lib/temple/control/sequence/tasks/ITask";
 import DevBarTask from "app/control/DevBarTask";
 
+import UserService from "app/net/service/UserService";
+
 // localization
 //import InitLocaleTask from "app/control/InitLocaleTask";
 
@@ -34,9 +36,11 @@ class StartUp
 		configManagerInstance.init(config.config, config.environment);
 
 		// just because we need it here!
-		DataManager.getInstance();
+		var dm:DataManager = DataManager.getInstance();
 
-		DataManager.getInstance().setupGateway();
+		dm.setupGateway();
+
+		dm.UserService = new UserService(dm.gateway);
 
 		Routes.init();
 

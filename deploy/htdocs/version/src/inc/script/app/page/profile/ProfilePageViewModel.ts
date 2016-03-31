@@ -3,9 +3,13 @@ import DataManager from "../../data/DataManager";
 
 import ko = require('knockout');
 
+import IUserData from "app/net/service/VO/IUserData";
+
 class ProfilePageViewModel extends DefaultPageViewModel
 {
 	// declare observables/computed
+
+	public CurrentUser:KnockoutObservable<IUserData> = ko.observable<IUserData>();
 	
 	constructor()
 	{

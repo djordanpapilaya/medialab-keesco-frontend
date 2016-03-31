@@ -77,7 +77,7 @@ define(["require", "exports"], function (require, exports) {
             "base": document.querySelector('meta[name=document-base]').getAttribute('content')
         },
         "urls": {
-            "api": { "url": "{base}api" }
+            "api": { "url": "http://medialab.jordibeen.nl/api/v1" }
         },
         "properties": {
             "defaultLocale": "en_GB"
@@ -110,5 +110,6 @@ define(["require", "exports"], function (require, exports) {
         config: config,
         environment: environment
     };
+    Object.defineProperty(exports, "__esModule", { value: true });
     exports.default = configMethod;
 });

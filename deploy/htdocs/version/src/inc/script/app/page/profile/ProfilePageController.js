@@ -3,7 +3,7 @@ var __extends = (this && this.__extends) || function (d, b) {
     function __() { this.constructor = d; }
     d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
 };
-define(["require", "exports", "app/page/DefaultPageController"], function (require, exports, DefaultPageController_1) {
+define(["require", "exports", "app/page/DefaultPageController", "../../data/DataManager"], function (require, exports, DefaultPageController_1, DataManager_1) {
     var ProfilePageController = (function (_super) {
         __extends(ProfilePageController, _super);
         function ProfilePageController() {
@@ -13,6 +13,7 @@ define(["require", "exports", "app/page/DefaultPageController"], function (requi
          *	After calling super.init, your pages DOM is ready
          */
         ProfilePageController.prototype.init = function () {
+            this.getUserInfo();
             _super.prototype.init.call(this);
         };
         /**
@@ -22,6 +23,13 @@ define(["require", "exports", "app/page/DefaultPageController"], function (requi
          *	- clear timeouts/intervals
          *	- do null-checks on your objects before destructing them, and set them to null afterwards
          */
+        ProfilePageController.prototype.getUserInfo = function () {
+            var _this = this;
+            DataManager_1.default.getInstance().UserService.getCurrentUser().then(function (result) {
+                _this.viewModel.CurrentUser(result);
+                console.log(_this.viewModel.CurrentUser());
+            });
+        };
         ProfilePageController.prototype.destruct = function () {
             // Put your cleaning here
             // always call this last
