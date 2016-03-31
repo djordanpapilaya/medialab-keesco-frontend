@@ -3,8 +3,55 @@
  */
 
 .view.view-profile {
-	@include respond-to("small")
-	{
+	@include respond-to("small") {
+		.user-profile {
+			height: 25%;
+			display: block;
+		}
+
+		.achievements {
+			height: 75%;
+			padding: 15px 15px;
+			display: block;
+		}
+
+		.stars {
+			padding: 22px 0 0;
+			display: block;
+			margin: 0 auto;
+			list-style: none;
+			height: 50px;
+			text-align: center;
+
+			.star {
+				@include size(30px);
+				display: inline-block;
+				margin: 0 auto;
+				padding: 0 10px;
+
+				&.high {
+					padding-bottom: 10px;
+				}
+
+				.star-image {
+					@include size(30px);
+				}
+			}
+		}
+
+		.user-image {
+			@include size(200px);
+			display: block;
+			margin: 0 auto;
+			border-radius: 50%;
+			background-position: center center;
+			background-size: 200%;
+		}
+
+		.user-name {
+			margin: 0 auto;
+			text-align: center;
+		}
 
 	}
 }

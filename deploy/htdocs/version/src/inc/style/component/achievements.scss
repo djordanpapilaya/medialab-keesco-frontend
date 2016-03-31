@@ -1,3 +1,37 @@
 .component-achievements {
+	@include respond-to('small') {
+		.achievements-list {
+			height: 75%;
+			width: 100%;
+			padding: 0;
+			list-style: none;
+			overflow: scroll;
+		}
 
+		.achievement {
+			margin-bottom: 20px;
+
+			.achievements-image {
+				@include size(55px);
+				display: inline-block;
+				background-position: center center;
+				background-size: 100% 100%;
+			}
+
+			.copy {
+				display: inline-block;
+				padding: 0 0 0 25px;
+				vertical-align: top;
+
+				.heading-02 {
+					padding: 0;
+					margin: 0;
+				}
+
+				.copy-01 {
+					margin: 0;
+				}
+			}
+		}
+	}
 }

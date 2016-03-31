@@ -1,7 +1,14 @@
 <div class="user-profile">
-
+	<ul class="stars" data-bind="foreach: new Array(3)">
+		<li class="star" data-bind="css: { 'high': ($index() % 2 != 0) }">
+			<img src="data/star.png" alt="x" class="star-image">
+		</li>
+	</ul>
+	<div class="user-image box-shadow" style="background-image: url('data/user-bart.jpg')"></div>
+	<h2 class="heading-01 user-name">Bart</h2>
 </div>
 
 <div class="achievements">
+	<div class="divider"></div>
 	<!--ko component: 'achievements'--><!--/ko-->
 </div>

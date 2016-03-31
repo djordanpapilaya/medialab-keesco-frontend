@@ -1,21 +1,30 @@
 // Headings
 .heading-01 {
-	font: $fontAgendaLightBold;
+	font-family: $fontAgendaLightBold;
+	font-size: 57px;
+	font-weight: bold;
+	color: #fff;
 }
 
 .heading-02 {
-	font: $fontAgendaMediumCondensed;
+	font-family: $fontAgendaMediumCondensed;
+	font-size: 30px;
+	color: #fff;
 }
 
 .heading-03 {
 	font: $fontAgendaLight;
+	color: #fff;
 }
 
 // Paragraphs
 .copy-01 {
 	font: $fontAgendaLight;
+	font-size: 20px;
+	color: #fff;
 }
 
 .copy-02 {
 	font: $fontAgendaLight;
+	color: #fff;
 }
