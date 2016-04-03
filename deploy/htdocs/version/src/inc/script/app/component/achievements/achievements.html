@@ -1,15 +1,15 @@
 <div class="component-achievements">
-	<ul class="achievements-list" data-bind="foreach: new Array(3)">
+	<ul class="achievements-list" data-bind="foreach: Achievements">
 		<li class="achievement">
 			<img class="achievements-image" src="data/default-star.png" alt="">
 
 			<div class="copy">
 				<h3 class="heading-02">
-					Lord of the Linnen
+					{{skill_name}}
 				</h3>
 
 				<p class="copy-01">
-					Snij 10 stukken linnen
+					{{name}}
 				</p>
 			</div>
 		</li>

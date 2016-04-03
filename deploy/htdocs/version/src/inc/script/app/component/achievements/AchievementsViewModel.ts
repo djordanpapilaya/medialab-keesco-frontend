@@ -7,27 +7,29 @@ import ko = require('knockout');
 
 class AchievementsViewModel extends AbstractComponentViewModel
 {
-    controller:AchievementsController;
+	controller:AchievementsController;
 
-    constructor()
-    {
-        super();
+	public Achievements:KnockoutObservable<any> = ko.observable<any>();
 
-        // initiate observables
+	constructor()
+	{
+		super();
 
-        // initiate computed
-    }
+		// initiate observables
 
-    /**
-     *	Destruct your data objects here
-     *	- set your observables to null
-     */
-    destruct()
-    {
-        // Put your cleaning here
+		// initiate computed
+	}
 
-        super.destruct();
-    }
+	/**
+	 *    Destruct your data objects here
+	 *    - set your observables to null
+	 */
+	destruct()
+	{
+		// Put your cleaning here
+
+		super.destruct();
+	}
 }
 
 export default AchievementsViewModel;

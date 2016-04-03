@@ -3,17 +3,18 @@ var __extends = (this && this.__extends) || function (d, b) {
     function __() { this.constructor = d; }
     d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
 };
-define(["require", "exports", 'lib/temple/component/AbstractComponentViewModel'], function (require, exports, AbstractComponentViewModel_1) {
+define(["require", "exports", 'lib/temple/component/AbstractComponentViewModel', 'knockout'], function (require, exports, AbstractComponentViewModel_1, ko) {
     var AchievementsViewModel = (function (_super) {
         __extends(AchievementsViewModel, _super);
         function AchievementsViewModel() {
             _super.call(this);
+            this.Achievements = ko.observable();
             // initiate observables
             // initiate computed
         }
         /**
-         *	Destruct your data objects here
-         *	- set your observables to null
+         *    Destruct your data objects here
+         *    - set your observables to null
          */
         AchievementsViewModel.prototype.destruct = function () {
             // Put your cleaning here
