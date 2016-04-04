@@ -4,9 +4,12 @@ import AchievementsOptions from 'app/component/achievements/AchievementsOptions'
 import AchievementsViewModel from 'app/component/achievements/AchievementsViewModel';
 
 import DataManager from "../../data/DataManager";
+import Branches from 'app/data/enum/Branches'
 
 import UserService from "app/net/service/UserService";
 import IUserData from "app/net/service/VO/IUserData";
+
+import * as Gaia from "lib/gaia/api/Gaia";
 
 class AchievementsController extends AbstractComponentController
 {
@@ -25,6 +28,11 @@ class AchievementsController extends AbstractComponentController
 	{
 		super.init();
 		this.getUserAchievements();
+
+		this.destructibles.addKOSubscription(this.viewModel.SelectedAchievement.subscribe((selectedAchievement) => {
+			console.log(selectedAchievement);
+			this.gotoAchievementDetail(selectedAchievement)
+		}));
 	}
 
 	public getUserAchievements()
@@ -34,6 +42,11 @@ class AchievementsController extends AbstractComponentController
 			console.log(result.user.completed_assignments);
 			this.viewModel.Achievements(result.user.completed_assignments);
 		});
+	}
+
+	public gotoAchievementDetail(achievementId:any)
+	{
+		Gaia.api.goto(Branches.ACHIEVEMENTS_DETAIL, {slug: achievementId.id});
 	}
 
 	destruct()

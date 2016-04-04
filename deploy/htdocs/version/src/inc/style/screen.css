@@ -454,7 +454,8 @@ table {
     list-style: none;
     overflow: scroll; }
   .component-achievements .achievement {
-    margin-bottom: 20px; }
+    margin-bottom: 20px;
+    cursor: pointer; }
     .component-achievements .achievement .achievements-image {
       height: 55px;
       width: 55px;

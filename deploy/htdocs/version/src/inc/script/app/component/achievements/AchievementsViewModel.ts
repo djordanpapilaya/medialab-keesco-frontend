@@ -5,11 +5,14 @@ import AchievementsController from 'app/component/achievements/AchievementsContr
 
 import ko = require('knockout');
 
+import IUserData from "app/net/service/VO/IUserData";
+
 class AchievementsViewModel extends AbstractComponentViewModel
 {
 	controller:AchievementsController;
 
 	public Achievements:KnockoutObservable<any> = ko.observable<any>();
+	public SelectedAchievement:KnockoutObservable<any> = ko.observable<any>();
 
 	constructor()
 	{

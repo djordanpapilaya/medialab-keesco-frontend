@@ -10,6 +10,7 @@
 
 		.achievement {
 			margin-bottom: 20px;
+			cursor: pointer;
 
 			.achievements-image {
 				@include size(55px);
