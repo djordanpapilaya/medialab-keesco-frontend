@@ -8,7 +8,7 @@ class Branches
 	public static HOME:string = 'index/home';
 	public static PROFILE:string = 'index/profile';
 	public static ACHIEVEMENTS:string = 'index/achievements';
-	public static ACHIEVEMENTS_DETAIL:string = 'index/achievement-detail';
+	public static ACHIEVEMENTS_DETAIL:string = 'index/achievements-detail';
 	
 }
 

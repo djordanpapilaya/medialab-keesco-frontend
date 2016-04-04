@@ -6,6 +6,7 @@ import RESTOutputHandler from "app/net/gateway/output/RESTOutputHandler";
 import RESTInputHandler from "app/net/gateway/input/RESTInputHandler";
 
 import UserService from "app/net/service/UserService";
+import AchievementService from "app/net/service/AchievementService";
 
 
 /**
@@ -17,6 +18,7 @@ class DataManager
 	private static _instance:DataManager;
 
 	public UserService:UserService;
+	public AchievementService:AchievementService;
 
 	/**
 	 * @property gateway
