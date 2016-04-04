@@ -10,6 +10,7 @@ import ITask from "lib/temple/control/sequence/tasks/ITask";
 import DevBarTask from "app/control/DevBarTask";
 
 import UserService from "app/net/service/UserService";
+import AchievementService from "app/net/service/AchievementService";
 
 // localization
 //import InitLocaleTask from "app/control/InitLocaleTask";
@@ -41,6 +42,7 @@ class StartUp
 		dm.setupGateway();
 
 		dm.UserService = new UserService(dm.gateway);
+		dm.AchievementService = new AchievementService(dm.gateway);
 
 		Routes.init();
 

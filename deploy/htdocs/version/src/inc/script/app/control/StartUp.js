@@ -1,4 +1,4 @@
-define(["require", "exports", "app/data/DataManager", 'knockout', "lib/temple/config/configManagerInstance", "app/config/config", "app/config/Routes", "lib/temple/control/sequence/Sequence", "lib/temple/control/sequence/tasks/MethodTask", "app/control/DevBarTask", "app/net/service/UserService"], function (require, exports, DataManager_1, ko, configManagerInstance_1, config_1, Routes_1, Sequence_1, MethodTask_1, DevBarTask_1, UserService_1) {
+define(["require", "exports", "app/data/DataManager", 'knockout', "lib/temple/config/configManagerInstance", "app/config/config", "app/config/Routes", "lib/temple/control/sequence/Sequence", "lib/temple/control/sequence/tasks/MethodTask", "app/control/DevBarTask", "app/net/service/UserService", "app/net/service/AchievementService"], function (require, exports, DataManager_1, ko, configManagerInstance_1, config_1, Routes_1, Sequence_1, MethodTask_1, DevBarTask_1, UserService_1, AchievementService_1) {
     // localization
     //import InitLocaleTask from "app/control/InitLocaleTask";
     /**
@@ -21,6 +21,7 @@ define(["require", "exports", "app/data/DataManager", 'knockout', "lib/temple/co
             var dm = DataManager_1.default.getInstance();
             dm.setupGateway();
             dm.UserService = new UserService_1.default(dm.gateway);
+            dm.AchievementService = new AchievementService_1.default(dm.gateway);
             Routes_1.default.init();
             var sequence = new Sequence_1.default();
             if (DEBUG && configManagerInstance_1.default.getEnvironment() != 'live'

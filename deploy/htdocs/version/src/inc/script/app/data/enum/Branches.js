@@ -10,7 +10,7 @@ define(["require", "exports"], function (require, exports) {
         Branches.HOME = 'index/home';
         Branches.PROFILE = 'index/profile';
         Branches.ACHIEVEMENTS = 'index/achievements';
-        Branches.ACHIEVEMENTS_DETAIL = 'index/achievement';
+        Branches.ACHIEVEMENTS_DETAIL = 'index/achievement-detail';
         return Branches;
     })();
     // use in templates

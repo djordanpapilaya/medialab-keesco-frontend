@@ -44,5 +44,6 @@ define(["require", "exports"], function (require, exports) {
         }
         return AbstractService;
     })();
+    Object.defineProperty(exports, "__esModule", { value: true });
     exports.default = AbstractService;
 });
