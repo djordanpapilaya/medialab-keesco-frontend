@@ -4,6 +4,7 @@ import IndexPageViewModel from 'app/page/index/IndexPageViewModel';
 import ko = require('knockout');
 import * as Gaia from 'lib/gaia/api/Gaia';
 import DataManager from 'app/data/DataManager';
+import Branches from 'app/data/enum/Branches'
 
 class IndexPageController extends DefaultPageController
 {

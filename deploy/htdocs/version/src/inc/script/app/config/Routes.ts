@@ -72,7 +72,7 @@ class Routes
 		//
 
 		// default page
-		Gaia.router.page('/', Branches.HOME);
+		Gaia.router.page('/', Branches.PROFILE);
 		Gaia.router.page('/profile', Branches.PROFILE);
 		Gaia.router.page('/achievement-detail/:' + Param.SLUG, Branches.ACHIEVEMENTS_DETAIL);
 		Gaia.router.page('/achievement-detail', Branches.ACHIEVEMENTS_DETAIL);

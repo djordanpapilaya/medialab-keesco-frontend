@@ -96,7 +96,8 @@ var sitemap:ISitemap = {
 				},
 				{
 					"id": "profile",
-					"title": "Profile"
+					"title": "Profile",
+					"landing": true
 				},
 				{
 					"id": "achievements",

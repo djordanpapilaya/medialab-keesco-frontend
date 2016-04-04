@@ -39,7 +39,7 @@ define(["require", "exports", "lib/temple/config/configManagerInstance", "lib/ga
             // ROUTE CONFIGURATION
             //
             // default page
-            Gaia.router.page('/', Branches_1.default.HOME);
+            Gaia.router.page('/', Branches_1.default.PROFILE);
             Gaia.router.page('/profile', Branches_1.default.PROFILE);
             Gaia.router.page('/achievement-detail/:' + Param_1.default.SLUG, Branches_1.default.ACHIEVEMENTS_DETAIL);
             Gaia.router.page('/achievement-detail', Branches_1.default.ACHIEVEMENTS_DETAIL);

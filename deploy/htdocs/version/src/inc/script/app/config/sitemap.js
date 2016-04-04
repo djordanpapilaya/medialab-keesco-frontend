@@ -85,7 +85,8 @@ define(["require", "exports"], function (require, exports) {
                     },
                     {
                         "id": "profile",
-                        "title": "Profile"
+                        "title": "Profile",
+                        "landing": true
                     },
                     {
                         "id": "achievements",
