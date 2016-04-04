@@ -3,7 +3,7 @@ var __extends = (this && this.__extends) || function (d, b) {
     function __() { this.constructor = d; }
     d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
 };
-define(["require", "exports", "app/page/DefaultPageController"], function (require, exports, DefaultPageController_1) {
+define(["require", "exports", "app/page/DefaultPageController", "../../data/DataManager", "lib/gaia/api/Gaia", "../../data/enum/Param"], function (require, exports, DefaultPageController_1, DataManager_1, Gaia, Param_1) {
     var AchievementsDetailPageController = (function (_super) {
         __extends(AchievementsDetailPageController, _super);
         function AchievementsDetailPageController() {
@@ -14,6 +14,19 @@ define(["require", "exports", "app/page/DefaultPageController"], function (requi
          */
         AchievementsDetailPageController.prototype.init = function () {
             _super.prototype.init.call(this);
+            var achievementId = Gaia.api.getParam(Param_1.default.SLUG);
+            this.getAchievement(achievementId);
+            console.log(achievementId);
+        };
+        AchievementsDetailPageController.prototype.onDeeplink = function (event) {
+            var achievementId = Gaia.api.getParam(Param_1.default.SLUG);
+            this.getAchievement(achievementId);
+        };
+        AchievementsDetailPageController.prototype.getAchievement = function (id) {
+            var _this = this;
+            DataManager_1.default.getInstance().AchievementService.getAssignment(id).then(function (result) {
+                _this.viewModel.Achievement(result);
+            });
         };
         /**
          *	Destruct your page objects here

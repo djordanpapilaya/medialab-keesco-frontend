@@ -1,15 +1,17 @@
 import DefaultPageController from "app/page/DefaultPageController";
-import AchievementsDetailPageViewModel from "app/page/achievements-detail/AchievementsDetailPageViewModel"; 
+import AchievementsDetailPageViewModel from "app/page/achievements-detail/AchievementsDetailPageViewModel";
 
 import DataManager from "../../data/DataManager";
+import GaiaHistoryEvent from "lib/gaia/events/GaiaHistoryEvent";
 import * as Gaia from "lib/gaia/api/Gaia";
 
 import ko = require("knockout");
+import Param from "../../data/enum/Param";
 
 class AchievementsDetailPageController extends DefaultPageController
 {
-	viewModel: AchievementsDetailPageViewModel; 
-	
+	viewModel: AchievementsDetailPageViewModel;
+
 	constructor()
 	{
 		super();
@@ -21,8 +23,24 @@ class AchievementsDetailPageController extends DefaultPageController
 	init()
 	{
 		super.init();
+		var achievementId:string = Gaia.api.getParam(Param.SLUG);
+		this.getAchievement(achievementId);
+		console.log(achievementId);
 	}
-	
+
+	public onDeeplink(event:GaiaHistoryEvent):void
+	{
+		var achievementId:string = Gaia.api.getParam(Param.SLUG);
+		this.getAchievement(achievementId);
+	}
+
+	public getAchievement(id:string)
+	{
+		DataManager.getInstance().AchievementService.getAssignment(id).then((result:any)=>{
+			this.viewModel.Achievement(result);
+		})
+	}
+
 	/**
 	 *	Destruct your page objects here
 	 *	- call destruct() on your own objects
@@ -33,7 +51,7 @@ class AchievementsDetailPageController extends DefaultPageController
 	destruct()
 	{
 		// Put your cleaning here
-		
+
 		// always call this last
 		super.destruct();
 	}

@@ -6,6 +6,8 @@ import ko = require('knockout');
 class AchievementsDetailPageViewModel extends DefaultPageViewModel
 {
 	// declare observables/computed
+
+	public Achievement:KnockoutObservable<any> = ko.observable<any>();
 	
 	constructor()
 	{
