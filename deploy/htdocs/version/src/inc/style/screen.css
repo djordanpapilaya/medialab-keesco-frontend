@@ -514,8 +514,15 @@ html, body {
 /**
  *	Page - index
  */
-.view.view-index .box-shadow {
-  box-shadow: 0 10px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); }
+.view.view-index {
+  display: block; }
+  .view.view-index .box-shadow {
+    box-shadow: 0 10px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); }
+  .view.view-index .no-mobile {
+    text-align: center; }
+  @media (max-width: 767px) {
+    .view.view-index .no-mobile {
+      display: none; } }
 
 /**
  *	Page - home
@@ -523,43 +530,47 @@ html, body {
 /**
  *	Page - profile
  */
-@media (max-width: 767px) {
-  .view.view-profile .user-profile {
-    height: 25%;
-    display: block; }
-  .view.view-profile .achievements {
-    height: 75%;
-    padding: 15px 15px;
-    display: block; }
-  .view.view-profile .stars {
-    padding: 22px 0 0;
-    display: block;
-    margin: 0 auto;
-    list-style: none;
-    height: 50px;
-    text-align: center; }
-    .view.view-profile .stars .star {
-      height: 30px;
-      width: 30px;
-      display: inline-block;
-      margin: 0 auto;
-      padding: 0 10px; }
-      .view.view-profile .stars .star.high {
-        padding-bottom: 10px; }
-      .view.view-profile .stars .star .star-image {
-        height: 30px;
-        width: 30px; }
-  .view.view-profile .user-image {
-    height: 200px;
-    width: 200px;
-    display: block;
-    margin: 0 auto;
-    border-radius: 50%;
-    background-position: center center;
-    background-size: 200%; }
-  .view.view-profile .user-name {
-    margin: 0 auto;
-    text-align: center; } }
+.view.view-profile {
+  display: none; }
+  @media (max-width: 767px) {
+    .view.view-profile {
+      display: block; }
+      .view.view-profile .user-profile {
+        height: 25%;
+        display: block; }
+      .view.view-profile .achievements {
+        height: 75%;
+        padding: 15px 15px;
+        display: block; }
+      .view.view-profile .stars {
+        padding: 22px 0 0;
+        display: block;
+        margin: 0 auto;
+        list-style: none;
+        height: 50px;
+        text-align: center; }
+        .view.view-profile .stars .star {
+          height: 30px;
+          width: 30px;
+          display: inline-block;
+          margin: 0 auto;
+          padding: 0 10px; }
+          .view.view-profile .stars .star.high {
+            padding-bottom: 10px; }
+          .view.view-profile .stars .star .star-image {
+            height: 30px;
+            width: 30px; }
+      .view.view-profile .user-image {
+        height: 200px;
+        width: 200px;
+        display: block;
+        margin: 0 auto;
+        border-radius: 50%;
+        background-position: center center;
+        background-size: 200%; }
+      .view.view-profile .user-name {
+        margin: 0 auto;
+        text-align: center; } }
 
 /**
  *	Page - achievements
@@ -567,5 +578,84 @@ html, body {
 /**
  *	Page - achievements-detail
  */
+.view.view-achievements-detail {
+  display: none; }
+  @media (max-width: 767px) {
+    .view.view-achievements-detail {
+      display: block; }
+      .view.view-achievements-detail .back_button {
+        display: block;
+        position: absolute;
+        left: 20px; }
+        .view.view-achievements-detail .back_button img {
+          height: 50px;
+          width: 50px;
+          cursor: pointer; }
+      .view.view-achievements-detail .user-profile {
+        height: 25%;
+        display: block; }
+      .view.view-achievements-detail .achievements {
+        height: 75%;
+        padding: 15px 15px;
+        display: block; }
+      .view.view-achievements-detail .stars {
+        padding: 22px 0 0;
+        display: block;
+        margin: 0 auto;
+        list-style: none;
+        height: 50px;
+        text-align: center; }
+        .view.view-achievements-detail .stars .star {
+          height: 30px;
+          width: 30px;
+          display: inline-block;
+          margin: 0 auto;
+          padding: 0 10px; }
+          .view.view-achievements-detail .stars .star.high {
+            padding-bottom: 10px; }
+          .view.view-achievements-detail .stars .star .star-image {
+            height: 30px;
+            width: 30px; }
+      .view.view-achievements-detail .peers {
+        padding: 15px; }
+      .view.view-achievements-detail .user-image {
+        height: 200px;
+        width: 200px;
+        display: block;
+        margin: 30px auto;
+        background-position: center center;
+        background-size: 100%;
+        background-repeat: no-repeat; }
+      .view.view-achievements-detail .user-name {
+        margin: 0 auto;
+        text-align: center; }
+      .view.view-achievements-detail .sub-title {
+        margin: 0 auto;
+        text-align: center; }
+      .view.view-achievements-detail .achievements-list {
+        height: 75%;
+        width: 100%;
+        padding: 0;
+        list-style: none;
+        overflow: scroll; }
+      .view.view-achievements-detail .achievement {
+        margin-bottom: 20px; }
+        .view.view-achievements-detail .achievement .achievements-image {
+          height: 55px;
+          width: 55px;
+          display: inline-block;
+          background-position: center center;
+          background-size: 100% 100%;
+          border-radius: 50%; }
+        .view.view-achievements-detail .achievement .copy {
+          display: inline-block;
+          padding: 0 0 0 25px;
+          vertical-align: top;
+          width: 250px; }
+          .view.view-achievements-detail .achievement .copy .heading-02 {
+            padding: 0;
+            margin: 0; }
+          .view.view-achievements-detail .achievement .copy .copy-01 {
+            margin: 0; } }
 
 /*# sourceMappingURL=screen.css.map */

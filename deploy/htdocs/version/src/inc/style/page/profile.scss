@@ -3,7 +3,9 @@
  */
 
 .view.view-profile {
+	display: none;
 	@include respond-to("small") {
+		display: block;
 		.user-profile {
 			height: 25%;
 			display: block;
