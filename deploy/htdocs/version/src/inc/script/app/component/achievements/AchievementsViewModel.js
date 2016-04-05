@@ -10,6 +10,7 @@ define(["require", "exports", 'lib/temple/component/AbstractComponentViewModel',
             _super.call(this);
             this.Achievements = ko.observable();
             this.SelectedAchievement = ko.observable();
+            this.Images = ko.observable();
             // initiate observables
             // initiate computed
         }

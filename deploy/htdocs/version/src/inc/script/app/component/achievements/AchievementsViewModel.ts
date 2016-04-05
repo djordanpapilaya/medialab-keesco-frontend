@@ -14,6 +14,8 @@ class AchievementsViewModel extends AbstractComponentViewModel
 	public Achievements:KnockoutObservable<any> = ko.observable<any>();
 	public SelectedAchievement:KnockoutObservable<any> = ko.observable<any>();
 
+	public Images:KnockoutObservable<any> = ko.observable<any>();
+
 	constructor()
 	{
 		super();

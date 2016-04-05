@@ -17,14 +17,12 @@ define(["require", "exports", 'lib/temple/component/AbstractComponentController'
             _super.prototype.init.call(this);
             this.getUserAchievements();
             this.destructibles.addKOSubscription(this.viewModel.SelectedAchievement.subscribe(function (selectedAchievement) {
-                console.log(selectedAchievement);
                 _this.gotoAchievementDetail(selectedAchievement);
             }));
         };
         AchievementsController.prototype.getUserAchievements = function () {
             var _this = this;
             DataManager_1.default.getInstance().UserService.getCurrentUser().then(function (result) {
-                console.log(result.user.completed_assignments);
                 _this.viewModel.Achievements(result.user.completed_assignments);
             });
         };

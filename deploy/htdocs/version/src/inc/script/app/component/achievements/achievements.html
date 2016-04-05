@@ -1,7 +1,7 @@
 <div class="component-achievements">
 	<ul class="achievements-list" data-bind="foreach: Achievements">
 		<li class="achievement" data-bind="click: $root.SelectedAchievement">
-			<img class="achievements-image" src="data/default-star.png" alt="">
+			<img class="achievements-image" alt="" data-bind="attr: { src: 'data/badges/' + skill_name + '_' + level +'.png' }">
 
 			<div class="copy">
 				<h3 class="heading-02">

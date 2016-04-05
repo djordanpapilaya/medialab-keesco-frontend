@@ -30,7 +30,6 @@ class AchievementsController extends AbstractComponentController
 		this.getUserAchievements();
 
 		this.destructibles.addKOSubscription(this.viewModel.SelectedAchievement.subscribe((selectedAchievement) => {
-			console.log(selectedAchievement);
 			this.gotoAchievementDetail(selectedAchievement)
 		}));
 	}
@@ -39,9 +38,10 @@ class AchievementsController extends AbstractComponentController
 	{
 		DataManager.getInstance().UserService.getCurrentUser().then((result:IUserData) =>
 		{
-			console.log(result.user.completed_assignments);
 			this.viewModel.Achievements(result.user.completed_assignments);
 		});
+
+
 	}
 
 	public gotoAchievementDetail(achievementId:any)
