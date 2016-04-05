@@ -1,7 +1,72 @@
-<h2>Achievements Detail</h2>
-<ul data-bind="foreach: Achievement">
-	<li>
-		<p>{{assignment.name}}</p>
-		<p>{{assignment.skill_name}}</p>
-	</li>
-</ul>
+<div class="back_button">
+	<img src="data/back.png" alt="back" data-bind="click: ()=>{gotoHome()}">
+</div>
+
+<div class="user-profile" data-bind="with: Achievement">
+	<div class="user-image" data-bind="style: {backgroundImage: 'url(\'' + 'data/badges/' + assignment.skill_name + '_'+ assignment.level + '.png' + '\')'}"></div>
+	<h2 class="heading-01 user-name" data-bind="">Level {{assignment.level}}</h2>
+
+	<p class="sub-title copy-01">{{assignment.name}}</p>
+</div>
+
+<div class="peers">
+	<div class="divider"></div>
+
+	<ul class="achievements-list">
+		<li class="achievement">
+			<img class="achievements-image" src="data/anne.jpg" alt="">
+
+			<div class="copy">
+				<h3 class="heading-02">
+					Anne
+				</h3>
+
+				<p class="copy-01">
+					24-02-2016
+				</p>
+			</div>
+		</li>
+
+		<li class="achievement">
+			<img class="achievements-image" src="data/mark.jpg" alt="">
+
+			<div class="copy">
+				<h3 class="heading-02">
+					Mark
+				</h3>
+
+				<p class="copy-01">
+					28-02-2016
+				</p>
+			</div>
+		</li>
+
+		<li class="achievement">
+			<img class="achievements-image" src="data/dennis.jpg" alt="">
+
+			<div class="copy">
+				<h3 class="heading-02">
+					Dennis
+				</h3>
+
+				<p class="copy-01">
+					03-03-2016
+				</p>
+			</div>
+		</li>
+
+		<li class="achievement">
+			<img class="achievements-image" src="data/marije.jpg" alt="">
+
+			<div class="copy">
+				<h3 class="heading-02">
+					Marije
+				</h3>
+
+				<p class="copy-01">
+					03-03-2016
+				</p>
+			</div>
+		</li>
+	</ul>
+</div>
