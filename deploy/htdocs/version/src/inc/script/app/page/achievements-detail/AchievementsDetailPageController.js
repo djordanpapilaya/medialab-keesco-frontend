@@ -16,7 +16,7 @@ define(["require", "exports", "app/page/DefaultPageController", "../../data/Data
             _super.prototype.init.call(this);
             var achievementId = Gaia.api.getParam(Param_1.default.SLUG);
             this.getAchievement(achievementId);
-            console.log(achievementId);
+            this.viewModel.currentAchievement(achievementId);
         };
         AchievementsDetailPageController.prototype.onDeeplink = function (event) {
             var achievementId = Gaia.api.getParam(Param_1.default.SLUG);
@@ -26,6 +26,8 @@ define(["require", "exports", "app/page/DefaultPageController", "../../data/Data
             var _this = this;
             DataManager_1.default.getInstance().AchievementService.getAssignment(id).then(function (result) {
                 _this.viewModel.Achievement(result);
+                console.log(result);
+                console.log(_this.viewModel.Achievement().assignment.skill_name);
             });
         };
         /**

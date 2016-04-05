@@ -25,7 +25,7 @@ class AchievementsDetailPageController extends DefaultPageController
 		super.init();
 		var achievementId:string = Gaia.api.getParam(Param.SLUG);
 		this.getAchievement(achievementId);
-		console.log(achievementId);
+		this.viewModel.currentAchievement(achievementId);
 	}
 
 	public onDeeplink(event:GaiaHistoryEvent):void
@@ -38,7 +38,10 @@ class AchievementsDetailPageController extends DefaultPageController
 	{
 		DataManager.getInstance().AchievementService.getAssignment(id).then((result:any)=>{
 			this.viewModel.Achievement(result);
-		})
+			console.log(result);
+
+			console.log(this.viewModel.Achievement().assignment.skill_name);
+		});
 	}
 
 	/**
